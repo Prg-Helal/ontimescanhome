@@ -1,0 +1,2522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز أشعة منزلي | OnTimeScan - خدمات التصوير الطبي المنزلي في القاهرة والجيزة</title>
+    <meta name="description" content="مركز OnTimeScan للأشعة المنزلية - نقدم خدمات التصوير الطبي في منزلك في القاهرة والجيزة. فحوصات دقيقة، نتائج سريعة، فريق طبي متخصص. احجز الآن عبر الواتساب.">
+    <meta name="keywords" content="أشعة منزلية, تصوير طبي, سونار, دوبلر, أشعة سينية, فحوصات طبية, القاهرة, الجيزة, مركز أشعة, أشعة منزلية في القاهرة">
+    <meta name="author" content="OnTimeScan">
+    <link rel="canonical" href="https://ontimescan.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="مركز OnTimeScan للأشعة المنزلية - القاهرة والجيزة">
+    <meta property="og:description" content="خدمات التصوير الطبي المنزلي في القاهرة والجيزة. فحوصات دقيقة، نتائج سريعة، فريق طبي متخصص.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ontimescan.com">
+    <meta property="og:image" content="https://ontimescan.com/assets/images/logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --gradient-primary: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+            --gradient-secondary: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+            --gradient-dark: linear-gradient(135deg, #005b8a 0%, #0093b8 100%);
+            --color-primary: #0077b6;
+            --color-secondary: #00b4d8;
+            --color-accent: #0096c7;
+            --color-white: #ffffff;
+            --color-light: #f8f9fa;
+            --color-lighter: #f1f3f5;
+            --color-gray: #6c757d;
+            --color-dark: #212529;
+            --color-darker: #1a1d21;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --border-radius: 12px;
+            --border-radius-lg: 16px;
+            --border-radius-xl: 20px;
+            --container-width: 1200px;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: var(--color-dark);
+            background-color: var(--color-white);
+            direction: rtl;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            background: var(--gradient-dark);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .btn-outline:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 1.1rem;
+        }
+
+        .btn-glow {
+            position: relative;
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: var(--border-radius);
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: -1;
+            filter: blur(10px);
+        }
+
+        .btn-glow:hover::before {
+            opacity: 0.6;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+            transform: translateY(0);
+        }
+
+        .header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow);
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            position: relative;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2.5rem;
+            margin: 0;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            position: relative;
+            color: var(--color-dark);
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--color-primary);
+        }
+
+        .nav-cta-mobile {
+            display: none;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-primary);
+            transition: var(--transition);
+            transform-origin: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 160px 0 120px;
+            background: var(--color-white);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 119, 182, 0.1);
+            color: var(--color-primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 119, 182, 0.2);
+        }
+
+        .hero-badge i {
+            color: var(--color-primary);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 2.5rem;
+            color: var(--color-dark);
+            font-weight: 700;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            color: var(--color-gray);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .feature-item i {
+            color: #4ade80;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            position: relative;
+        }
+
+        .floating-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .image-container {
+            position: relative;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition-slow);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Wave Divider */
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100px;
+        }
+
+        .wave-divider .shape-fill {
+            fill: var(--color-white);
+        }
+
+        /* Sections Common Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-description {
+            font-size: 1.3rem;
+            color: var(--color-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--color-lighter);
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .service-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.15);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+            position: relative;
+            z-index: 2;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+            line-height: 1.4;
+            min-height: 3.5rem;
+        }
+
+        .service-description {
+            color: var(--color-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .service-features {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-gray);
+            font-size: 0.9rem;
+        }
+
+        .service-features i {
+            color: #4ade80;
+            font-size: 0.8rem;
+        }
+
+        /* Load More Button */
+        .load-more-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .load-more-btn {
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .load-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: var(--gradient-dark);
+        }
+
+        .load-more-btn i {
+            transition: var(--transition);
+        }
+
+        .load-more-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        /* Hidden Services */
+        .service-card.hidden {
+            display: none;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--color-white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .about-text .section-header {
+            text-align: right;
+            margin-bottom: 3rem;
+        }
+
+        .about-text .section-header .section-title::after {
+            right: 0;
+            transform: none;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-description {
+            font-size: 1.2rem !important;
+            color: var(--color-dark);
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .about-feature i {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .about-feature h4 {
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        .about-feature p {
+            margin: 0;
+            color: var(--color-gray);
+            font-size: 0.9rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .image-frame {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-2xl);
+            position: relative;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition-slow);
+        }
+
+        .image-frame:hover img {
+            transform: scale(1.05);
+        }
+
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .experience-badge .years {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .experience-badge .text {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            background: var(--color-lighter);
+            padding: 3rem;
+            border-radius: var(--border-radius-lg);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--color-white);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+
+        .stat h3 {
+            font-size: 2.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat p {
+            margin: 0;
+            color: var(--color-gray);
+            font-weight: 600;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            background: var(--color-lighter);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--color-white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            transition: var(--transition);
+            font-size: 2rem;
+        }
+
+        .feature:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature h3 {
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+            font-size: 1.4rem;
+        }
+
+        .feature p {
+            color: var(--color-gray);
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--color-white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .contact-info .section-header {
+            text-align: right;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info .section-header .section-title::after {
+            right: 0;
+            transform: none;
+        }
+
+        .contact-description {
+            font-size: 1.2rem;
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: var(--color-lighter);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-item:hover {
+            transform: translateX(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            flex-shrink: 0;
+            transition: var(--transition);
+            font-size: 1.5rem;
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.1);
+        }
+
+        .contact-text h3 {
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+            font-size: 1.3rem;
+        }
+
+        .contact-text a {
+            font-weight: 600;
+            color: var(--color-dark);
+            transition: var(--transition);
+        }
+
+        .contact-text a:hover {
+            color: var(--color-primary);
+        }
+
+        .working-hours {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--color-lighter);
+            border-radius: var(--border-radius);
+        }
+
+        .working-hours h4 {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .hour-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-card {
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            padding: 3rem 2.5rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-2xl);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .cta-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-header i {
+            font-size: 3rem;
+            opacity: 0.9;
+        }
+
+        .cta-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-card p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .cta-note {
+            margin-top: 2rem;
+            text-align: right;
+        }
+
+        .cta-note p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cta-note i {
+            color: #4ade80;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--color-darker);
+            color: var(--color-white);
+            padding: 80px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo h2 {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .footer-social a:hover {
+            background: var(--color-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3,
+        .footer-services h3,
+        .footer-contact h3 {
+            margin-bottom: 1.5rem;
+            color: var(--color-secondary);
+            font-size: 1.3rem;
+        }
+
+        .footer-links ul,
+        .footer-services ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-links a,
+        .footer-services a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover,
+        .footer-services a:hover {
+            color: var(--color-secondary);
+            padding-right: 10px;
+        }
+
+        .footer-contact .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-contact a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-contact a:hover {
+            color: var(--color-secondary);
+        }
+
+        .address {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+            font-size: 1.8rem;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-float:hover .float-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .float-tooltip {
+            position: absolute;
+            right: 70px;
+            background: var(--color-dark);
+            color: var(--color-white);
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: var(--transition);
+            pointer-events: none;
+        }
+
+        .float-tooltip::after {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-left: 5px solid var(--color-dark);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 35px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            font-size: 1.2rem;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 119, 182, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 100%;
+                padding: 0 30px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 12px 0;
+            }
+            
+            /* Mobile Navigation */
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background: var(--color-white);
+                box-shadow: var(--shadow-xl);
+                transition: var(--transition);
+                z-index: 999;
+                padding: 80px 30px 30px;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            
+            .nav.active {
+                right: 0;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%;
+            }
+            
+            .nav-link {
+                padding: 12px 0;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                width: 100%;
+                display: block;
+            }
+            
+            .nav-link::after {
+                display: none;
+            }
+            
+            .nav-cta-mobile {
+                display: block;
+                margin-top: 2rem;
+                width: 100%;
+            }
+            
+            .nav-cta-mobile .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .header-cta {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.8rem;
+            }
+            
+            .hero-description {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-description {
+                font-size: 1.1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .footer-social {
+                justify-content: center;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                left: 20px;
+                font-size: 1.6rem;
+            }
+            
+            .scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 90px;
+                left: 20px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .service-card,
+            .feature,
+            .contact-item {
+                padding: 1.5rem;
+            }
+            
+            .cta-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .stats {
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .stat {
+                padding: 1rem;
+            }
+            
+            .stat h3 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                gap: 3rem;
+            }
+            
+            .experience-badge {
+                position: relative;
+                bottom: 0;
+                left: 0;
+                margin-top: 2rem;
+            }
+            
+            /* Fix responsive issues for about, why-us, contact sections */
+            .about-text .section-header,
+            .contact-info .section-header {
+                text-align: center;
+            }
+            
+            .about-text .section-header .section-title::after,
+            .contact-info .section-header .section-title::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .contact-icon {
+                margin: 0 auto;
+            }
+            
+            .hour-item {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+            
+            .service-image {
+                height: 200px;
+            }
+            
+            .service-title {
+                font-size: 1.2rem;
+                min-height: auto;
+            }
+        }
+
+        /* AOS Animation Overrides */
+        [data-aos] {
+            pointer-events: none;
+        }
+
+        [data-aos].aos-animate {
+            pointer-events: auto;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        /* Loading States */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+
+        /* Body no-scroll when mobile menu is open */
+        body.no-scroll {
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#home">
+                        <!-- استبدال النص بصورة -->
+                        <img src="assets/images/logo.png" alt="OnTimeScan - مركز أشعة منزلي" class="logo-img">
+                    </a>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                        <li><a href="#services" class="nav-link">خدماتنا</a></li>
+                        <li><a href="#about" class="nav-link">من نحن</a></li>
+                        <li><a href="#why-us" class="nav-link">لماذا نحن</a></li>
+                        <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
+                    </ul>
+                    
+                    <div class="nav-cta-mobile">
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة أشعة منزلية " class="btn btn-primary" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة أشعة منزلية " class="btn btn-primary" target="_blank">
+                        <i class="fas fa-calendar-check"></i> احجز الآن
+                    </a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>الرائدون في الأشعة المنزلية في القاهرة والجيزة</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">مركز أشعة منزلي</span>
+                        <br>
+                        <span class="hero-subtitle">OnTimeScan</span>
+                    </h1>
+                    <p class="hero-description">
+                        نقدم خدمات التصوير الطبي المتقدمة في منزلك في القاهرة والجيزة مع فريق طبي متخصص وأجهزة حديثة. راحة، خصوصية، ودقة في النتائج.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة أشعة منزلية " class="btn btn-primary btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                        <a href="#services" class="btn btn-secondary">
+                         خدماتنا
+                        </a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>نتائج دقيقة 100%</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>فريق طبي متخصص</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>خدمة في القاهرة والجيزة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="floating-image">
+                        <div class="image-container">
+                            <img src="assets/images/hero-image.png" alt="خدمات الأشعة المنزلية في القاهرة والجيزة" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">خدماتنا المتخصصة</h2>
+                <p class="section-description">نقدم مجموعة متكاملة من خدمات التصوير الطبي المنزلي في القاهرة والجيزة بأعلى معايير الجودة</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="service-image">
+                        <img src="assets/images/service-1.png" alt="سونار بطن و حوض" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار بطن و حوض</h3>
+                        <p class="service-description">
+                            فحوصات السونار المتقدمة للبطن والحوض لتشخيص دقيق للأمراض والمشاكل المختلفة مع نتائج فورية.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                            <span><i class="fas fa-check"></i> نتائج فورية</span>
+                            <span><i class="fas fa-check"></i> فحص شامل</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار بطن و حوض " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                    <div class="service-image">
+                        <img src="assets/images/service-2.png" alt="سونار الغده الدرقيه و اللعابيه" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار الغده الدرقيه و اللعابيه</h3>
+                        <p class="service-description">
+                            فحوصات دقيقة للغدة الدرقية والغدد اللعابية لتشخيص الأمراض والمشاكل الوظيفية بدقة عالية.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> فحص متخصص</span>
+                            <span><i class="fas fa-check"></i> دقة عالية</span>
+                            <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار الغده الدرقيه و اللعابيه " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-image">
+                        <img src="assets/images/service-3.png" alt="سونار و دوبلر الخصيتين" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار و دوبلر الخصيتين</h3>
+                        <p class="service-description">
+                            فحوصات متخصصة للخصيتين باستخدام السونار والدوبلر لتشخيص الأمراض والمشاكل المختلفة بدقة.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> فحص دقيق</span>
+                            <span><i class="fas fa-check"></i> تقنيات متطورة</span>
+                            <span><i class="fas fa-check"></i> خصوصية تامة</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار و دوبلر الخصيتين " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
+                    <div class="service-image">
+                        <img src="assets/images/service-4.png" alt="سونار اجزاء مسطحه" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار اجزاء مسطحه</h3>
+                        <p class="service-description">
+                            فحوصات السونار للأجزاء المسطحة من الجسم لتشخيص الإصابات والأمراض المختلفة بدقة عالية.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> فحص شامل</span>
+                            <span><i class="fas fa-check"></i> نتائج دقيقة</span>
+                            <span><i class="fas fa-check"></i> تشخيص متكامل</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار اجزاء مسطحه " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="service-image">
+                        <img src="assets/images/service-5.png" alt="سونار على الثدي" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار على الثدي</h3>
+                        <p class="service-description">
+                            فحوصات السونار المتخصصة للثدي للكشف المبكر عن الأمراض والمشاكل المختلفة بدقة عالية.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> كشف مبكر</span>
+                            <span><i class="fas fa-check"></i> دقة عالية</span>
+                            <span><i class="fas fa-check"></i> خصوصية تامة</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار على الثدي " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
+                    <div class="service-image">
+                        <img src="assets/images/service-6.png" alt="سونار على المفاصل و العضلات" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار على المفاصل و العضلات</h3>
+                        <p class="service-description">
+                            فحوصات السونار للمفاصل والعضلات لتشخيص الإصابات والأمراض المختلفة بدقة عالية.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                            <span><i class="fas fa-check"></i> فحص متكامل</span>
+                            <span><i class="fas fa-check"></i> نتائج فورية</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار على المفاصل و العضلات " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-image">
+                        <img src="assets/images/service-7.png" alt="سونار على متابعة الحمل" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار على متابعة الحمل</h3>
+                        <p class="service-description">
+                            فحوصات السونار لمتابعة الحمل وتطور الجين بدقة عالية ورعاية متخصصة في منزلك.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> متابعة مستمرة</span>
+                            <span><i class="fas fa-check"></i> رعاية متخصصة</span>
+                            <span><i class="fas fa-check"></i> خصوصية تامة</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار على متابعة الحمل " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="450">
+                    <div class="service-image">
+                        <img src="assets/images/service-8.png" alt="سونار و دوبلر مخ الاطفال اقل من سنه" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">سونار و دوبلر مخ الاطفال اقل من سنه</h3>
+                        <p class="service-description">
+                            فحوصات متخصصة لمخ الأطفال باستخدام السونار والدوبلر لتشخيص الأمراض والمشاكل بدقة.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> فحص متخصص</span>
+                            <span><i class="fas fa-check"></i> دقة عالية</span>
+                            <span><i class="fas fa-check"></i> أمان تام</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار و دوبلر مخ الاطفال اقل من سنه " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 9 -->
+                <div class="service-card hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="service-image">
+                        <img src="assets/images/service-9.png" alt="دوبلر شرايين و اوردة الاطراف" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">دوبلر شرايين و اوردة الاطراف</h3>
+                        <p class="service-description">
+                            فحوصات الدوبلر المتقدمة لشرايين وأوردة الأطراف لتشخيص مشاكل الدورة الدموية بدقة.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                            <span><i class="fas fa-check"></i> فحص شامل</span>
+                            <span><i class="fas fa-check"></i> نتائج فورية</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر شرايين و اوردة الاطراف " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 10 -->
+                <div class="service-card hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="550">
+                    <div class="service-image">
+                        <img src="assets/images/service-10.png" alt="دوبلر شرايين الرقبه" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">دوبلر شرايين الرقبه</h3>
+                        <p class="service-description">
+                            فحوصات الدوبلر لشرايين الرقبة لتشخيص مشاكل الدورة الدموية والجلطات بدقة عالية.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> كشف مبكر</span>
+                            <span><i class="fas fa-check"></i> دقة عالية</span>
+                            <span><i class="fas fa-check"></i> فحص دقيق</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر شرايين الرقبه " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 11 -->
+                <div class="service-card hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="service-image">
+                        <img src="assets/images/service-11.png" alt="دوبلر شرايين و واردة الكلى" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">دوبلر شرايين و واردة الكلى</h3>
+                        <p class="service-description">
+                            فحوصات الدوبلر لشرايين وأوردة الكلى لتشخيص مشاكل الدورة الدموية والأمراض بدقة.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> فحص متخصص</span>
+                            <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                            <span><i class="fas fa-check"></i> نتائج موثوقة</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر شرايين و واردة الكلى " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 12 -->
+                <div class="service-card hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="650">
+                    <div class="service-image">
+                        <img src="assets/images/service-12.png" alt="دوبلر عىل المبيضين" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">دوبلر على المبيضين</h3>
+                        <p class="service-description">
+                            فحوصات الدوبلر للمبيضين لتشخيص الأمراض والمشاكل الوظيفية بدقة عالية ورعاية متخصصة.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> فحص دقيق</span>
+                            <span><i class="fas fa-check"></i> خصوصية تامة</span>
+                            <span><i class="fas fa-check"></i> نتائج موثوقة</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر عىل المبيضين " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 13 -->
+                <div class="service-card hidden" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                    <div class="service-image">
+                        <img src="assets/images/service-13.png" alt="اشعة اكس راي X-ray" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">اشعة اكس راي X-ray</h3>
+                        <p class="service-description">
+                            فحوصات الأشعة السينية التقليدية والمتقدمة لتشخيص الكسور ومشاكل العظام المختلفة بدقة.
+                        </p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> تشخيص الكسور</span>
+                            <span><i class="fas fa-check"></i> نتائج سريعة</span>
+                            <span><i class="fas fa-check"></i> دقة عالية</span>
+                        </div>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة اشعة اكس راي X-ray " class="btn btn-outline btn-glow" target="_blank">
+                            <i class="fas fa-calendar-check"></i> احجز الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- زر عرض المزيد -->
+            <div class="load-more-container" data-aos="fade-up" data-aos-duration="800">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-chevron-down"></i> عرض المزيد
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-up" data-aos-duration="800">
+                    <div class="section-header">
+                        <h2 class="section-title">من نحن</h2>
+                        <p class="section-description">مركز طبي رائد في تقديم خدمات التصوير الطبي المنزلي في القاهرة والجيزة</p>
+                    </div>
+                    <p class="about-description">
+                        <strong>مركز OnTimeScan للأشعة المنزلية</strong> هو مركز طبي رائد في تقديم خدمات التصوير الطبي المنزلي في القاهرة والجيزة. نحن نؤمن بأن الرعاية الصحية يجب أن تكون مريحة وسهلة الوصول، ولهذا نقدم خدماتنا مباشرة في منزلك.
+                    </p>
+                    <p>
+                        فريقنا الطبي يتكون من أخصائيين ذوي خبرة عالية في مجال الأشعة والتشخيص، ونستخدم أحدث الأجهزة الطبية لضمان دقة النتائج وسرعة تقديمها. نحن نغطي جميع مناطق القاهرة والجيزة بخدماتنا المتميزة.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>جودة معتمدة</h4>
+                                <p>نلتزم بأعلى معايير الجودة والسلامة</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>فريق متخصص</h4>
+                                <p>أطباء وفنيون ذوو خبرة واسعة</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>خدمة القاهرة والجيزة</h4>
+                                <p>نغطي جميع مناطق القاهرة والجيزة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-up" data-aos-duration="800">
+                    <div class="image-frame">
+                        <img src="assets/images/about-image.png" alt="فريق العمل في مركز OnTimeScan" loading="lazy">
+                        <div class="experience-badge">
+                            <span class="years">5+</span>
+                            <span class="text">سنوات من الخبرة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats" data-aos="fade-up" data-aos-duration="800">
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <h3>500+</h3>
+                    <p>عمليات مسح ناجحة</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>2</h3>
+                    <p>محافظات خدمة</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>98%</h3>
+                    <p>رضا العملاء</p>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>15+</h3>
+                    <p>فريق طبي متخصص</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+                <h2 class="section-title">لماذا تختار OnTimeScan؟</h2>
+                <p class="section-description">مزايا فريدة تجعلنا الخيار الأمثل لخدمات التصوير الطبي المنزلي في القاهرة والجيزة</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>الراحة في منزلك</h3>
+                    <p>لا داعي للتنقل أو الانتظار في المستشفيات، نحن نأتي إليك في منزلك في القاهرة والجيزة</p>
+                </div>
+                
+                <div class="feature" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>دقة النتائج</h3>
+                    <p>نتائج دقيقة وموثوقة مع تفسير مفصل من أخصائيين مؤهلين ومرخصين</p>
+                </div>
+                
+                <div class="feature" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>خصوصية تامة</h3>
+                    <p>نضمن خصوصية معلوماتك الطبية ونقدم خدمة شخصية في منزلك</p>
+                </div>
+                
+                <div class="feature" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>سرعة الاستجابة</h3>
+                    <p>حجز سريع ومواعيد مرنة تناسب احتياجاتك مع نتائج في أسرع وقت</p>
+                </div>
+                
+                <div class="feature" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>أجهزة متطورة</h3>
+                    <p>أحدث أجهزة التصوير الطبي لتشخيص دقيق ونتائج عالية الجودة</p>
+                </div>
+                
+                <div class="feature" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>خدمة القاهرة والجيزة</h3>
+                    <p>نغطي جميع مناطق القاهرة والجيزة بخدماتنا المتميزة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-up" data-aos-duration="800">
+                    <div class="section-header">
+                        <h2 class="section-title">اتصل بنا الآن</h2>
+                        <p class="section-description">نحن هنا لمساعدتك! تواصل معنا للحجز أو الاستفسار عن خدماتنا في القاهرة والجيزة.</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>اتصل بنا</h3>
+                                <a href="tel:01285891866" class="phone-link">01285891866</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>الواتساب</h3>
+                                <a href="https://wa.me/201285891866?text=مرحباً، أود الاستفسار عن خدمات الأشعة المنزلية " target="_blank">اضغط للتواصل عبر الواتساب</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>منطقة الخدمة</h3>
+                                <p>نقدم خدماتنا في جميع أنحاء القاهرة والجيزة</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="working-hours">
+                        <h4>أوقات العمل</h4>
+                        <div class="hours-list">
+                            <div class="hour-item">
+                                <span>الأحد - الخميس</span>
+                                <span>8:00 ص - 10:00 م</span>
+                            </div>
+                            <div class="hour-item">
+                                <span>الجمعة - السبت</span>
+                                <span>9:00 ص - 8:00 م</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta" data-aos="fade-up" data-aos-duration="800">
+                    <div class="cta-card">
+                        <div class="cta-header">
+                            <i class="fas fa-calendar-check"></i>
+                            <h3>احجز موعدك الآن</h3>
+                        </div>
+                        <p>تواصل معنا عبر الواتساب للحجز أو الاستفسار عن خدماتنا في القاهرة والجيزة</p>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود حجز موعد لخدمة أشعة منزلية " class="btn btn-primary btn-large btn-glow" target="_blank">
+                            <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
+                        </a>
+                        <div class="cta-note">
+                            <p><i class="fas fa-check-circle"></i> رد فوري خلال دقائق</p>
+                            <p><i class="fas fa-check-circle"></i> حجز موعد في 24 ساعة</p>
+                            <p><i class="fas fa-check-circle"></i> استشارة مجانية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>OnTimeScan</h2>
+                    <p>مركز أشعة منزلي</p>
+                    <p class="footer-description">نقدم خدمات التصوير الطبي المنزلي في القاهرة والجيزة بأعلى معايير الجودة والاحترافية</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود الاستفسار عن خدماتكم " aria-label="واتساب" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#why-us">لماذا نحن</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>خدماتنا</h3>
+                    <ul>
+                        <li><a href="#services">سونار بطن و حوض</a></li>
+                        <li><a href="#services">سونار الغده الدرقيه</a></li>
+                        <li><a href="#services">سونار و دوبلر الخصيتين</a></li>
+                        <li><a href="#services">اشعة اكس راي</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>تواصل معنا</h3>
+                    <div class="contact-info">
+                        <a href="tel:01285891866" class="phone-link">
+                            <i class="fas fa-phone-alt"></i> 01285891866
+                        </a>
+                        <a href="https://wa.me/201285891866?text=مرحباً، أود الاستفسار عن خدماتكم " target="_blank">
+                            <i class="fab fa-whatsapp"></i> الواتساب
+                        </a>
+                        <div class="address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>نقدم خدماتنا في جميع أنحاء القاهرة والجيزة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; <span id="currentYear"></span> OnTimeScan - مركز أشعة منزلي</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة أشعة منزلية " class="whatsapp-float" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+        <span class="float-tooltip">تواصل معنا</span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="الانتقال إلى الأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Initialize AOS (Animate On Scroll)
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false,
+                offset: 100
+            });
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Header Scroll Effect - Hide on scroll down, show on scroll up
+            const header = document.getElementById('header');
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+            
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                
+                if (currentScrollY > 100) {
+                    header.classList.add('scrolled');
+                    
+                    if (currentScrollY > lastScrollY && currentScrollY > 150) {
+                        // Scrolling down
+                        header.classList.add('hidden');
+                    } else if (currentScrollY < lastScrollY && currentScrollY > 150) {
+                        // Scrolling up
+                        header.classList.remove('hidden');
+                    }
+                } else {
+                    // header.classList.remove('scrolled', 'hidden');
+                }
+                
+                lastScrollY = currentScrollY;
+                ticking = false;
+            }
+            
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }
+            
+            window.addEventListener('scroll', onScroll);
+            
+            // Mobile Navigation Toggle
+            const hamburger = document.getElementById('hamburger');
+            const nav = document.getElementById('nav');
+            const body = document.body;
+            
+            if (hamburger && nav) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    nav.classList.toggle('active');
+                    body.classList.toggle('no-scroll');
+                });
+                
+                // Close mobile menu when clicking on a link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                        body.classList.remove('no-scroll');
+                    });
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    const isClickInsideNav = nav.contains(event.target);
+                    const isClickOnHamburger = hamburger.contains(event.target);
+                    
+                    if (!isClickInsideNav && !isClickOnHamburger && nav.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                        body.classList.remove('no-scroll');
+                    }
+                });
+            }
+            
+            // Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = header.offsetHeight;
+                        const targetPosition = targetElement.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Lazy Loading Images with Intersection Observer
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('loaded');
+                            
+                            // Load the actual image if it's a placeholder
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                delete img.dataset.src;
+                            }
+                            
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                }, {
+                    rootMargin: '50px 0px',
+                    threshold: 0.1
+                });
+                
+                lazyImages.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for browsers that don't support IntersectionObserver
+                lazyImages.forEach(img => {
+                    img.classList.add('loaded');
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                    }
+                });
+            }
+            
+            // Stats Counter Animation
+            const stats = document.querySelectorAll('.stat h3');
+            let statsAnimated = false;
+            
+            function animateStats() {
+                if (statsAnimated) return;
+                
+                const statSection = document.querySelector('.stats');
+                if (!statSection) return;
+                
+                const statSectionTop = statSection.offsetTop;
+                const windowHeight = window.innerHeight;
+                
+                if (window.scrollY > statSectionTop - windowHeight + 100) {
+                    statsAnimated = true;
+                    
+                    stats.forEach(stat => {
+                        const target = parseInt(stat.textContent);
+                        let current = 0;
+                        const increment = target / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
+                        }, 30);
+                    });
+                }
+            }
+            
+            // WhatsApp Button Click Analytics
+            const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+            
+            whatsappButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // You can add analytics tracking here
+                    console.log('WhatsApp button clicked:', this.href);
+                });
+            });
+            
+            // Scroll to Top Button
+            const scrollTopButton = document.getElementById('scrollTop');
+            
+            function toggleScrollTopButton() {
+                if (window.scrollY > 300) {
+                    scrollTopButton.classList.add('visible');
+                } else {
+                    scrollTopButton.classList.remove('visible');
+                }
+                
+                // Animate stats when in view
+                animateStats();
+            }
+            
+            if (scrollTopButton) {
+                window.addEventListener('scroll', toggleScrollTopButton);
+                
+                scrollTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                // Initialize on load
+                toggleScrollTopButton();
+            }
+            
+            // Phone Number Formatting and Tracking
+            const phoneLinks = document.querySelectorAll('.phone-link');
+            
+            phoneLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // You can add phone call tracking here
+                    console.log('Phone number clicked:', this.textContent);
+                });
+            });
+            
+            // Load More Services Functionality
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const hiddenServices = document.querySelectorAll('.service-card.hidden');
+            let servicesShown = 0;
+            
+            if (loadMoreBtn && hiddenServices.length > 0) {
+                loadMoreBtn.addEventListener('click', function() {
+                    // Show next 3 services
+                    const servicesToShow = Math.min(3, hiddenServices.length - servicesShown);
+                    
+                    for (let i = servicesShown; i < servicesShown + servicesToShow; i++) {
+                        if (hiddenServices[i]) {
+                            hiddenServices[i].classList.remove('hidden');
+                            // Reinitialize AOS for newly shown elements
+                            AOS.refresh();
+                        }
+                    }
+                    
+                    servicesShown += servicesToShow;
+                    
+                    // Update button text or hide if all services are shown
+                    if (servicesShown >= hiddenServices.length) {
+                        loadMoreBtn.innerHTML = '<i class="fas fa-check"></i> تم عرض جميع الخدمات';
+                        loadMoreBtn.disabled = true;
+                        setTimeout(() => {
+                            loadMoreBtn.style.display = 'none';
+                        }, 3000);
+                    } else {
+                        loadMoreBtn.innerHTML = '<i class="fas fa-chevron-down"></i> عرض المزيد (' + (hiddenServices.length - servicesShown) + ')';
+                    }
+                });
+            }
+            
+            // Performance Optimization: Debounce Scroll Events
+            function debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+            
+            // Optimized scroll handler for header
+            const optimizedScrollHandler = debounce(onScroll, 10);
+            window.addEventListener('scroll', optimizedScrollHandler);
+            
+            // Initialize all components
+            console.log('OnTimeScan website initialized successfully');
+        });
+    </script>
+</body>
+</html>
