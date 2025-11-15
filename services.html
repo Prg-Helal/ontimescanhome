@@ -1,0 +1,2889 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خدماتنا | OnTimeScan - مركز أشعة وتحاليل منزلي</title>
+    <meta
+      name="description"
+      content="اكتشف جميع خدمات الأشعة والتحاليل الطبية المنزلية التي نقدمها في OnTimeScan. سونار، دوبلر، أشعة سينية، تحاليل الدم والكيمياء الحيوية والمزيد."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- AOS Library for Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      /* CSS Variables */
+      :root {
+        --gradient-primary: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+        --gradient-secondary: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+        --gradient-dark: linear-gradient(135deg, #005b8a 0%, #0093b8 100%);
+        --color-primary: #0077b6;
+        --color-secondary: #00b4d8;
+        --color-accent: #0096c7;
+        --color-white: #ffffff;
+        --color-light: #f8f9fa;
+        --color-lighter: #f1f3f5;
+        --color-gray: #6c757d;
+        --color-dark: #212529;
+        --color-darker: #1a1d21;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+        --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+        --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+        --transition: all 0.3s ease;
+        --transition-slow: all 0.5s ease;
+        --border-radius: 12px;
+        --border-radius-lg: 16px;
+        --border-radius-xl: 20px;
+        --container-width: 1200px;
+      }
+
+      /* Reset & Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Cairo", sans-serif;
+        line-height: 1.6;
+        color: var(--color-dark);
+        background-color: var(--color-white);
+        direction: rtl;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 28px;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        font-family: inherit;
+        font-size: 1rem;
+        gap: 8px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-primary {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+        background: var(--gradient-dark);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+      }
+
+      .btn-secondary:hover {
+        background: var(--color-primary);
+        color: var(--color-white);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .btn-outline:hover {
+        background: var(--color-primary);
+        color: var(--color-white);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-large {
+        padding: 16px 32px;
+        font-size: 1.1rem;
+      }
+
+      .btn-glow {
+        position: relative;
+      }
+
+      .btn-glow::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: var(--border-radius);
+        background: var(--gradient-primary);
+        opacity: 0;
+        transition: var(--transition);
+        z-index: -1;
+        filter: blur(10px);
+      }
+
+      .btn-glow:hover::before {
+        opacity: 0.6;
+      }
+
+      /* Header */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          box-shadow 0.3s ease, background-color 0.3s ease;
+        transform: translateY(0);
+      }
+
+      .header.hidden {
+        transform: translateY(-100%);
+      }
+
+      .header.scrolled {
+        box-shadow: var(--shadow);
+        background-color: rgba(255, 255, 255, 0.98);
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        position: relative;
+      }
+
+      .logo-img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      /* Navigation */
+      .nav {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-list {
+        display: flex;
+        gap: 2.5rem;
+        margin: 0;
+      }
+
+      .nav-link {
+        font-weight: 600;
+        position: relative;
+        color: var(--color-dark);
+        padding: 8px 0;
+        transition: var(--transition);
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-primary);
+        transition: var(--transition);
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .nav-link:hover {
+        color: var(--color-primary);
+      }
+
+      .nav-cta-mobile {
+        display: none;
+      }
+
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+        z-index: 1001;
+        padding: 8px;
+      }
+
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--color-primary);
+        transition: var(--transition);
+        transform-origin: center;
+      }
+
+      /* Hero Section */
+      .services-hero {
+        position: relative;
+        padding: 160px 0 80px;
+        background: var(--color-white);
+        overflow: hidden;
+      }
+
+      .services-hero-content {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .services-hero-title {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+      }
+
+      .gradient-text {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        display: inline-block;
+      }
+
+      .services-hero-description {
+        font-size: 1.3rem;
+        color: var(--color-gray);
+        margin-bottom: 2.5rem;
+        line-height: 1.7;
+      }
+
+      /* Sections Common Styles */
+      section {
+        padding: 80px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 100px;
+        height: 4px;
+        background: var(--gradient-primary);
+        border-radius: 2px;
+      }
+
+      .section-description {
+        font-size: 1.2rem;
+        color: var(--color-gray);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      /* Services Filter */
+      .services-filter {
+        background-color: var(--color-lighter);
+        padding: 40px 0;
+      }
+
+      .filter-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .filter-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-tab {
+        padding: 12px 24px;
+        background: var(--color-white);
+        border: 2px solid var(--color-primary);
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .filter-tab.active {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+      }
+
+      .filter-tab:hover:not(.active) {
+        background: rgba(0, 119, 182, 0.1);
+      }
+
+      .search-box {
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 15px 50px 15px 20px;
+        border: 2px solid var(--color-primary);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        font-family: inherit;
+        transition: var(--transition);
+      }
+
+      .search-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-primary);
+        font-size: 1.2rem;
+      }
+
+      /* Services Section */
+      .services {
+        background-color: var(--color-white);
+        position: relative;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2.5rem;
+      }
+
+      /* حل مشكلة الـ Hover على الكروت */
+      .service-card {
+        background: var(--color-white);
+        border-radius: var(--border-radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        position: relative;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(0) scale(1);
+        will-change: transform, box-shadow;
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          box-shadow 0.4s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: var(--shadow-2xl);
+      }
+
+      .service-image {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+        flex-shrink: 0;
+        will-change: transform;
+      }
+
+      .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        will-change: transform;
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .service-card:hover .service-image img {
+        transform: scale(1.1);
+      }
+
+      .service-content {
+        padding: 1.5rem;
+        position: relative;
+        z-index: 2;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .service-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--color-primary);
+        line-height: 1.4;
+      }
+
+      .service-description {
+        color: var(--color-gray);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        flex-grow: 1;
+      }
+
+      .service-features {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-features span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--color-gray);
+        font-size: 0.9rem;
+      }
+
+      .service-features i {
+        color: #4ade80;
+        font-size: 0.8rem;
+      }
+
+      /* Hidden Services */
+      .service-card.hidden {
+        display: none;
+      }
+
+      /* Load More Button */
+      .load-more-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+
+      .load-more-btn {
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        border: none;
+        padding: 12px 30px;
+        border-radius: var(--border-radius);
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .load-more-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+        background: var(--gradient-dark);
+      }
+
+      .load-more-btn i {
+        transition: var(--transition);
+      }
+
+      .load-more-btn.active i {
+        transform: rotate(180deg);
+      }
+
+      .load-more-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      /* No Results Message */
+      .no-results {
+        text-align: center;
+        padding: 3rem;
+        background: var(--color-lighter);
+        border-radius: var(--border-radius);
+        grid-column: 1 / -1;
+      }
+
+      .no-results i {
+        font-size: 3rem;
+        color: var(--color-gray);
+        margin-bottom: 1rem;
+      }
+
+      .no-results h3 {
+        color: var(--color-gray);
+        margin-bottom: 1rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--color-darker);
+        color: var(--color-white);
+        padding: 80px 0 20px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .footer-logo h2 {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+
+      .footer-description {
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-social a {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+        font-size: 1.2rem;
+      }
+
+      .footer-social a:hover {
+        background: var(--color-primary);
+        transform: translateY(-3px);
+      }
+
+      .footer-links h3,
+      .footer-services h3,
+      .footer-contact h3 {
+        margin-bottom: 1.5rem;
+        color: var(--color-secondary);
+        font-size: 1.3rem;
+      }
+
+      .footer-links ul,
+      .footer-services ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .footer-links a,
+      .footer-services a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: var(--transition);
+      }
+
+      .footer-links a:hover,
+      .footer-services a:hover {
+        color: var(--color-secondary);
+        padding-right: 10px;
+      }
+
+      .footer-contact .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .footer-contact a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.7);
+        transition: var(--transition);
+      }
+
+      .footer-contact a:hover {
+        color: var(--color-secondary);
+      }
+
+      .address {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.5;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 3rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* WhatsApp Floating Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 25px;
+        left: 25px;
+        width: 60px;
+        height: 60px;
+        background: #25d366;
+        color: var(--color-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-lg);
+        z-index: 1000;
+        transition: var(--transition);
+        animation: pulse 2s infinite;
+        font-size: 1.8rem;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      }
+
+      .whatsapp-float:hover .float-tooltip {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .float-tooltip {
+        position: absolute;
+        right: 70px;
+        background: var(--color-dark);
+        color: var(--color-white);
+        padding: 8px 12px;
+        border-radius: var(--border-radius);
+        font-size: 0.8rem;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: var(--transition);
+        pointer-events: none;
+      }
+
+      .float-tooltip::after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 5px solid var(--color-dark);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      /* Scroll to Top Button */
+      .scroll-top {
+        position: fixed;
+        bottom: 35px;
+        right: 25px;
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-primary);
+        color: var(--color-white);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-lg);
+        z-index: 999;
+        cursor: pointer;
+        transition: var(--transition);
+        opacity: 0;
+        visibility: hidden;
+        font-size: 1.2rem;
+      }
+
+      .scroll-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scroll-top:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 119, 182, 0.4);
+      }
+
+      /* Loading Spinner */
+      .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s ease-in-out infinite;
+        margin-left: 8px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .container {
+          max-width: 100%;
+          padding: 0 30px;
+        }
+
+        .footer-content {
+          grid-template-columns: 2fr 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .services-hero-title {
+          font-size: 3rem;
+        }
+
+        .section-title {
+          font-size: 2.2rem;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          padding: 12px 0;
+        }
+
+        /* Mobile Navigation */
+        .nav {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 300px;
+          height: 100vh;
+          background: var(--color-white);
+          box-shadow: var(--shadow-xl);
+          transition: var(--transition);
+          z-index: 999;
+          padding: 80px 30px 30px;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+
+        .nav.active {
+          right: 0;
+        }
+
+        .nav-list {
+          flex-direction: column;
+          gap: 1.5rem;
+          width: 100%;
+        }
+
+        .nav-link {
+          padding: 12px 0;
+          font-size: 1.1rem;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          width: 100%;
+          display: block;
+        }
+
+        .nav-link::after {
+          display: none;
+        }
+
+        .nav-cta-mobile {
+          display: block;
+          margin-top: 2rem;
+          width: 100%;
+        }
+
+        .nav-cta-mobile .btn {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .header-cta {
+          display: none;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+
+        .hamburger.active span:nth-child(1) {
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .services-hero {
+          padding: 140px 0 60px;
+        }
+
+        .services-hero-title {
+          font-size: 2.5rem;
+        }
+
+        .services-hero-description {
+          font-size: 1.1rem;
+        }
+
+        section {
+          padding: 60px 0;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .section-description {
+          font-size: 1.1rem;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          text-align: center;
+        }
+
+        .footer-social {
+          justify-content: center;
+        }
+
+        .whatsapp-float {
+          width: 55px;
+          height: 55px;
+          bottom: 20px;
+          left: 20px;
+          font-size: 1.6rem;
+        }
+
+        .scroll-top {
+          width: 45px;
+          height: 45px;
+          bottom: 25px;
+          left: 20px;
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .container {
+          padding: 0 20px;
+        }
+
+        .services-hero {
+          padding: 120px 0 40px;
+        }
+
+        .services-hero-title {
+          font-size: 2.2rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .service-card,
+        .feature {
+          padding: 1.5rem;
+        }
+
+        .service-image {
+          height: 200px;
+        }
+
+        .service-title {
+          font-size: 1.2rem;
+        }
+
+        .filter-tabs {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .filter-tab {
+          width: 100%;
+          max-width: 250px;
+          text-align: center;
+        }
+      }
+
+      /* AOS Animation Overrides */
+      [data-aos] {
+        pointer-events: none;
+      }
+
+      [data-aos].aos-animate {
+        pointer-events: auto;
+      }
+
+      /* Utility Classes */
+      .text-center {
+        text-align: center;
+      }
+
+      .mb-0 {
+        margin-bottom: 0;
+      }
+
+      .mt-2 {
+        margin-top: 2rem;
+      }
+
+      /* Loading States */
+      img[loading="lazy"] {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      img[loading="lazy"].loaded {
+        opacity: 1;
+      }
+
+      /* Body no-scroll when mobile menu is open */
+      body.no-scroll {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="assets/images/logo.png"
+                alt="OnTimeScan - مركز أشعة منزلي"
+                class="logo-img"
+              />
+            </a>
+          </div>
+
+          <nav class="nav" id="nav">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+              <li><a href="services.html" class="nav-link">خدماتنا</a></li>
+              <li><a href="index.html#about" class="nav-link">من نحن</a></li>
+              <li>
+                <a href="index.html#why-us" class="nav-link">لماذا نحن</a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="nav-link">اتصل بنا</a>
+              </li>
+            </ul>
+
+            <div class="nav-cta-mobile">
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة أشعة منزلية "
+                class="btn btn-primary"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </nav>
+
+          <div class="header-cta">
+            <a
+              href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة أشعة منزلية "
+              class="btn btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-calendar-check"></i> احجز الآن
+            </a>
+          </div>
+
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+      <div class="container">
+        <div
+          class="services-hero-content"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h1 class="services-hero-title">
+            <span class="gradient-text">خدماتنا المتكاملة</span>
+          </h1>
+          <p class="services-hero-description">
+            اكتشف جميع خدمات الأشعة والتحاليل الطبية المنزلية التي نقدمها في
+            OnTimeScan. فريق استشاري متخصص، أجهزة حديثة، ونتائج دقيقة في منزلك
+            في القاهرة والجيزة.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Filter -->
+    <section class="services-filter">
+      <div class="container">
+        <div
+          class="filter-container"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <div class="filter-tabs">
+            <div class="filter-tab active" data-category="all">
+              جميع الخدمات
+            </div>
+            <div class="filter-tab" data-category="radiology">خدمات الأشعة</div>
+            <div class="filter-tab" data-category="tests">خدمات التحاليل</div>
+          </div>
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              id="searchInput"
+              placeholder="ابحث عن خدمة معينة..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Radiology Services Section -->
+    <section class="services" id="radiology-services">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="section-title">خدمات الأشعة</h2>
+          <p class="section-description">
+            نقدم مجموعة متكاملة من خدمات التصوير الطبي المنزلي في القاهرة
+            والجيزة بأعلى معايير الجودة
+          </p>
+        </div>
+
+        <div class="services-grid" id="radiology-grid">
+          <!-- Service 1 -->
+          <div
+            class="service-card"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-1.png"
+                alt="سونار بطن و حوض"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار بطن و حوض</h3>
+              <p class="service-description">
+                فحوصات السونار المتقدمة للبطن والحوض لتشخيص دقيق للأمراض
+                والمشاكل المختلفة مع نتائج فورية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                <span><i class="fas fa-check"></i> نتائج فورية</span>
+                <span><i class="fas fa-check"></i> فحص شامل</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار بطن و حوض "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="service-card"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="150"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-2.png"
+                alt="سونار الغده الدرقيه و اللعابيه"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار الغده الدرقيه و اللعابيه</h3>
+              <p class="service-description">
+                فحوصات دقيقة للغدة الدرقية والغدد اللعابية لتشخيص الأمراض
+                والمشاكل الوظيفية بدقة عالية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فحص متخصص</span>
+                <span><i class="fas fa-check"></i> دقة عالية</span>
+                <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار الغده الدرقيه و اللعابيه "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="service-card"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-3.png"
+                alt="سونار و دوبلر الخصيتين"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار و دوبلر الخصيتين</h3>
+              <p class="service-description">
+                فحوصات متخصصة للخصيتين باستخدام السونار والدوبلر لتشخيص الأمراض
+                والمشاكل المختلفة بدقة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فحص دقيق</span>
+                <span><i class="fas fa-check"></i> تقنيات متطورة</span>
+                <span><i class="fas fa-check"></i> خصوصية تامة</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار و دوبلر الخصيتين "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="250"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-4.png"
+                alt="سونار اجزاء مسطحه"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار اجزاء مسطحه</h3>
+              <p class="service-description">
+                فحوصات السونار للأجزاء المسطحة من الجسم لتشخيص الإصابات والأمراض
+                المختلفة بدقة عالية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فحص شامل</span>
+                <span><i class="fas fa-check"></i> نتائج دقيقة</span>
+                <span><i class="fas fa-check"></i> تشخيص متكامل</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار اجزاء مسطحه "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="service-card"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-5.png"
+                alt="سونار على الثدي"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار على الثدي</h3>
+              <p class="service-description">
+                فحوصات السونار المتخصصة للثدي للكشف المبكر عن الأمراض والمشاكل
+                المختلفة بدقة عالية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> كشف مبكر</span>
+                <span><i class="fas fa-check"></i> دقة عالية</span>
+                <span><i class="fas fa-check"></i> خصوصية تامة</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار على الثدي "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="service-card"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="350"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-6.png"
+                alt="سونار على المفاصل و العضلات"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار على المفاصل و العضلات</h3>
+              <p class="service-description">
+                فحوصات السونار للمفاصل والعضلات لتشخيص الإصابات والأمراض
+                المختلفة بدقة عالية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                <span><i class="fas fa-check"></i> فحص متكامل</span>
+                <span><i class="fas fa-check"></i> نتائج فورية</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار على المفاصل و العضلات "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Hidden Radiology Services -->
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-7.png"
+                alt="سونار على متابعة الحمل"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار على متابعة الحمل</h3>
+              <p class="service-description">
+                فحوصات السونار لمتابعة الحمل وتطور الجين بدقة عالية ورعاية
+                متخصصة في منزلك.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> متابعة مستمرة</span>
+                <span><i class="fas fa-check"></i> رعاية متخصصة</span>
+                <span><i class="fas fa-check"></i> خصوصية تامة</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار على متابعة الحمل "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="450"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-8.png"
+                alt="سونار و دوبلر مخ الاطفال اقل من سنه"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">سونار و دوبلر مخ الاطفال اقل من سنه</h3>
+              <p class="service-description">
+                فحوصات متخصصة لمخ الأطفال باستخدام السونار والدوبلر لتشخيص
+                الأمراض والمشاكل بدقة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فحص متخصص</span>
+                <span><i class="fas fa-check"></i> دقة عالية</span>
+                <span><i class="fas fa-check"></i> أمان تام</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة سونار و دوبلر مخ الاطفال اقل من سنه "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-9.png"
+                alt="دوبلر شرايين و اوردة الاطراف"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">دوبلر شرايين و اوردة الاطراف</h3>
+              <p class="service-description">
+                فحوصات الدوبلر المتقدمة لشرايين وأوردة الأطراف لتشخيص مشاكل
+                الدورة الدموية بدقة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                <span><i class="fas fa-check"></i> فحص شامل</span>
+                <span><i class="fas fa-check"></i> نتائج فورية</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر شرايين و اوردة الاطراف "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="550"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-10.png"
+                alt="دوبلر شرايين الرقبه"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">دوبلر شرايين الرقبه</h3>
+              <p class="service-description">
+                فحوصات الدوبلر لشرايين الرقبة لتشخيص مشاكل الدورة الدموية
+                والجلطات بدقة عالية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> كشف مبكر</span>
+                <span><i class="fas fa-check"></i> دقة عالية</span>
+                <span><i class="fas fa-check"></i> فحص دقيق</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر شرايين الرقبه "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-11.png"
+                alt="دوبلر شرايين و واردة الكلى"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">دوبلر شرايين و واردة الكلى</h3>
+              <p class="service-description">
+                فحوصات الدوبلر لشرايين وأوردة الكلى لتشخيص مشاكل الدورة الدموية
+                والأمراض بدقة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فحص متخصص</span>
+                <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                <span><i class="fas fa-check"></i> نتائج موثوقة</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر شرايين و واردة الكلى "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="650"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-12.png"
+                alt="دوبلر عىل المبيضين"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">دوبلر على المبيضين</h3>
+              <p class="service-description">
+                فحوصات الدوبلر للمبيضين لتشخيص الأمراض والمشاكل الوظيفية بدقة
+                عالية ورعاية متخصصة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فحص دقيق</span>
+                <span><i class="fas fa-check"></i> خصوصية تامة</span>
+                <span><i class="fas fa-check"></i> نتائج موثوقة</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة دوبلر عىل المبيضين "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="700"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-13.png"
+                alt="اشعة اكس راي X-ray"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">اشعة اكس راي X-ray</h3>
+              <p class="service-description">
+                فحوصات الأشعة السينية التقليدية والمتقدمة لتشخيص الكسور ومشاكل
+                العظام المختلفة بدقة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تشخيص الكسور</span>
+                <span><i class="fas fa-check"></i> نتائج سريعة</span>
+                <span><i class="fas fa-check"></i> دقة عالية</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة اشعة اكس راي X-ray "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- ECG -->
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-14.png"
+                alt="رسم القلب ECG"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">رسم القلب (ECG)</h3>
+              <p class="service-description">
+                فحص سريع لقياس النشاط الكهربائي للقلب، يساعد في تشخيص اضطراب
+                النبض وأمراض الشرايين.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فحص فوري</span>
+                <span><i class="fas fa-check"></i> بدون ألم</span>
+                <span><i class="fas fa-check"></i> نتائج دقيقة</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة رسم القلب ECG"
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- ECHO -->
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="250"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-15.png"
+                alt="أشعة الإيكو على القلب"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">الإيكو على القلب (ECHO)</h3>
+              <p class="service-description">
+                فحص بالموجات الصوتية يقدم صورة واضحة للقلب وحركته وصماماته
+                لتشخيص أمراض القلب بدقة عالية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تصوير دقيق</span>
+                <span><i class="fas fa-check"></i> يوضح وظائف القلب</span>
+                <span><i class="fas fa-check"></i> آمن تمامًا</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة الإيكو على القلب ECHO"
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- EEG -->
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-16.png"
+                alt="رسم المخ EEG"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">رسم المخ (EEG)</h3>
+              <p class="service-description">
+                فحص يقيس الإشارات الكهربائية للمخ لتشخيص حالات الصرع والدوخة
+                والمشاكل العصبية المختلفة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تشخيص دقيق</span>
+                <span><i class="fas fa-check"></i> غير مؤلم</span>
+                <span><i class="fas fa-check"></i> مناسب للأطفال والكبار</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة رسم المخ EEG"
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- EMG & NCS -->
+          <div
+            class="service-card hidden"
+            data-category="radiology"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="350"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/radiology/service-17.png"
+                alt="رسم العصب EMG"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">رسم العصب (EMG & NCS)</h3>
+              <p class="service-description">
+                فحص الأعصاب والعضلات لتشخيص التهابات الأعصاب، انضغاط الأعصاب،
+                وضعف العضلات.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تشخيص شامل</span>
+                <span><i class="fas fa-check"></i> يحدد مكان إصابة العصب</span>
+                <span><i class="fas fa-check"></i> دقة عالية</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة رسم العصب EMG"
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- زر عرض المزيد للأشعة -->
+        <div
+          class="load-more-container"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <button class="load-more-btn" id="loadMoreRadiologyBtn">
+            <i class="fas fa-chevron-down"></i> عرض المزيد من خدمات الأشعة
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tests Services Section -->
+    <section
+      class="services"
+      id="tests-services"
+      style="background-color: var(--color-lighter)"
+    >
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+          <h2 class="section-title">خدمات التحاليل</h2>
+          <p class="section-description">
+            نقدم مجموعة شاملة من التحاليل الطبية المنزلية بدقة عالية ونتائج
+            موثوقة في القاهرة والجيزة
+          </p>
+        </div>
+
+        <div class="services-grid" id="tests-grid">
+          <!-- Test Category 1 -->
+          <div
+            class="service-card"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-1.png"
+                alt="تحاليل الدم"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل الدم</h3>
+              <p class="service-description">
+                فحوصات دم شاملة تشمل تعداد الدم الكامل، فصيلة الدم، سرعة
+                الترسيب، البروتين التفاعلي وغيرها من التحاليل الأساسية.
+              </p>
+              <div class="service-features">
+                <span
+                  ><i class="fas fa-check"></i> CBC - تعداد الدم الكامل</span
+                >
+                <span><i class="fas fa-check"></i> فصيلة الدم والريسوس</span>
+                <span><i class="fas fa-check"></i> ESR و CRP</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل الدم "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Test Category 2 -->
+          <div
+            class="service-card"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="150"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-2.png"
+                alt="الكيمياء الحيوية"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">الكيمياء الحيوية</h3>
+              <p class="service-description">
+                تحاليل وظائف الكبد والكلى، الدهون، السكر، الأملاح والإنزيمات
+                لتقييم الحالة الصحية العامة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> وظائف الكبد والكلى</span>
+                <span><i class="fas fa-check"></i> الدهون والسكر</span>
+                <span><i class="fas fa-check"></i> الأملاح والإنزيمات</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل الكيمياء الحيوية "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Test Category 3 -->
+          <div
+            class="service-card"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-3.png"
+                alt="تحليل الهرمونات"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحليل الهرمونات</h3>
+              <p class="service-description">
+                فحوصات شاملة للهرمونات تشمل الغدة الدرقية، النخامية، الجنسية
+                والكظرية لتشخيص الاضطرابات الهرمونية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> هرمونات الغدة الدرقية</span>
+                <span><i class="fas fa-check"></i> الهرمونات الجنسية</span>
+                <span><i class="fas fa-check"></i> هرمونات الغدة النخامية</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل الهرمونات "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Test Category 4 -->
+          <div
+            class="service-card"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="250"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-4.png"
+                alt="المناعة والالتهابات"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">المناعة والالتهابات</h3>
+              <p class="service-description">
+                تحاليل المناعة الذاتية، الأجسام المضادة، البروتينات المكملة
+                وغيرها لتشخيص أمراض المناعة والالتهابات.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> ANA والأجسام المضادة</span>
+                <span><i class="fas fa-check"></i> العامل الروماتويدي</span>
+                <span><i class="fas fa-check"></i> البروتينات المكملة</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل المناعة والالتهابات "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Test Category 5 -->
+          <div
+            class="service-card"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-5.png"
+                alt="تحاليل العدوى والميكروبات"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل العدوى والميكروبات</h3>
+              <p class="service-description">
+                فحوصات المزارع البكتيرية، الفيروسات، الطفيليات والفحوصات
+                الجزيئية لتشخيص الأمراض المعدية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> المزارع البكتيرية</span>
+                <span><i class="fas fa-check"></i> الفحوصات الفيروسية</span>
+                <span><i class="fas fa-check"></i> PCR والفحوصات الجزيئية</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل العدوى والميكروبات "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Test Category 6 -->
+          <div
+            class="service-card"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="350"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-6.png"
+                alt="تحاليل البول والبراز"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل البول والبراز</h3>
+              <p class="service-description">
+                فحوصات شاملة للبول والبراز تشمل التحليل الروتيني، المزرعة،
+                والفحص المجهري لتشخيص أمراض الجهاز البولي والهضمي.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> تحليل البول الروتيني</span>
+                <span><i class="fas fa-check"></i> مزرعة البول والبراز</span>
+                <span><i class="fas fa-check"></i> الفحص المجهري</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل البول والبراز "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <!-- Hidden Tests Services -->
+          <div
+            class="service-card hidden"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-7.png"
+                alt="تحاليل القلب"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل القلب</h3>
+              <p class="service-description">
+                فحوصات إنزيمات القلب، الدايمر، ومؤشرات القصور القلبي لتقييم صحة
+                القلب والأوعية الدموية.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> التروبونين والإنزيمات</span>
+                <span><i class="fas fa-check"></i> الدايمر</span>
+                <span><i class="fas fa-check"></i> BNP و NT-proBNP</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل القلب "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="450"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-8.png"
+                alt="تحاليل الأورام"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل الأورام</h3>
+              <p class="service-description">
+                فحوصات المؤشرات الورمية مثل PSA، AFP، CEA وغيرها للمساعدة في
+                تشخيص ومتابعة الأورام.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> PSA للبروستاتا</span>
+                <span><i class="fas fa-check"></i> AFP للكبد</span>
+                <span><i class="fas fa-check"></i> CEA للجهاز الهضمي</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل الأورام "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-9.png"
+                alt="تحاليل الفيتامينات والمعادن"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل الفيتامينات والمعادن</h3>
+              <p class="service-description">
+                فحوصات شاملة للفيتامينات والمعادن الأساسية مثل فيتامين د، ب12،
+                الحديد، الكالسيوم والمغنيسيوم.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فيتامين د وب12</span>
+                <span><i class="fas fa-check"></i> الحديد والفيريتين</span>
+                <span><i class="fas fa-check"></i> الكالسيوم والمغنيسيوم</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل الفيتامينات والمعادن "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="550"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-10.png"
+                alt="تحاليل السيولة والتجلط"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل السيولة والتجلط</h3>
+              <p class="service-description">
+                فحوصات تخثر الدم مثل PT، PTT، INR، الفيبرينوجين لتقييم وظائف
+                التجلط والسيولة.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> PT و PTT</span>
+                <span><i class="fas fa-check"></i> INR</span>
+                <span><i class="fas fa-check"></i> الفيبرينوجين</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل السيولة والتجلط "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-11.png"
+                alt="تحاليل قبل الزواج"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل قبل الزواج</h3>
+              <p class="service-description">
+                فحوصات شاملة قبل الزواج تشمل فصيلة الدم، الأمراض الوراثية،
+                والأمراض المعدية لضمان صحة الزوجين.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> فصيلة الدم والريسوس</span>
+                <span><i class="fas fa-check"></i> الأمراض الوراثية</span>
+                <span><i class="fas fa-check"></i> الأمراض المعدية</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل قبل الزواج "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="service-card hidden"
+            data-category="tests"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="650"
+          >
+            <div class="service-image">
+              <img
+                src="assets/images/lab-tests/service-12.png"
+                alt="تحاليل الحمل"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">تحاليل الحمل</h3>
+              <p class="service-description">
+                فحوصات متخصصة للحمل تشمل هرمون الحمل، فصيلة الدم، الأمراض
+                المعدية وفحص السكر.
+              </p>
+              <div class="service-features">
+                <span><i class="fas fa-check"></i> هرمون الحمل Beta hCG</span>
+                <span><i class="fas fa-check"></i> فصيلة الدم والريسوس</span>
+                <span><i class="fas fa-check"></i> فحص السكر</span>
+              </div>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة تحاليل الحمل "
+                class="btn btn-outline btn-glow"
+                target="_blank"
+              >
+                <i class="fas fa-calendar-check"></i> احجز الآن
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- زر عرض المزيد للتحاليل -->
+        <div
+          class="load-more-container"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <button class="load-more-btn" id="loadMoreTestsBtn">
+            <i class="fas fa-chevron-down"></i> عرض المزيد من خدمات التحاليل
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>OnTimeScan</h2>
+            <p>مركز أشعة وتحاليل منزلي</p>
+            <p class="footer-description">
+              نقدم خدمات التصوير الطبي والتحاليل المنزلية في القاهرة والجيزة
+              بأعلى معايير الجودة والاحترافية
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="فيسبوك"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="إنستغرام"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود الاستفسار عن خدماتكم "
+                aria-label="واتساب"
+                target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>روابط سريعة</h3>
+            <ul>
+              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="services.html">خدماتنا</a></li>
+              <li><a href="index.html#about">من نحن</a></li>
+              <li><a href="index.html#why-us">لماذا نحن</a></li>
+              <li><a href="index.html#contact">اتصل بنا</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-services">
+            <h3>خدماتنا</h3>
+            <ul>
+              <li><a href="#radiology-services">خدمات الأشعة</a></li>
+              <li><a href="#tests-services">خدمات التحاليل</a></li>
+              <li><a href="#radiology-services">سونار بطن و حوض</a></li>
+              <li><a href="#tests-services">تحاليل الدم</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>تواصل معنا</h3>
+            <div class="contact-info">
+              <a href="tel:01285891866" class="phone-link">
+                <i class="fas fa-phone-alt"></i> 01285891866
+              </a>
+              <a
+                href="https://wa.me/201285891866?text=مرحباً، أود الاستفسار عن خدماتكم "
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i> الواتساب
+              </a>
+              <div class="address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>نقدم خدماتنا في جميع أنحاء القاهرة والجيزة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            جميع الحقوق محفوظة &copy; <span id="currentYear"></span> OnTimeScan
+            - مركز أشعة وتحاليل منزلي
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/201285891866?text=مرحباً، أود حجز خدمة أشعة منزلية "
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="تواصل معنا عبر واتساب"
+    >
+      <i class="fab fa-whatsapp"></i>
+      <span class="float-tooltip">تواصل معنا</span>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="الانتقال إلى الأعلى">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
+          mirror: false,
+          offset: 100,
+        });
+
+        // Set current year in footer
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
+
+        // Header Scroll Effect - Hide on scroll down, show on scroll up
+        const header = document.getElementById("header");
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateHeader() {
+          const currentScrollY = window.scrollY;
+
+          if (currentScrollY > 100) {
+            header.classList.add("scrolled");
+
+            if (currentScrollY > lastScrollY && currentScrollY > 150) {
+              // Scrolling down
+              header.classList.add("hidden");
+            } else if (currentScrollY < lastScrollY && currentScrollY > 150) {
+              // Scrolling up
+              header.classList.remove("hidden");
+            }
+          } else {
+            // header.classList.remove('scrolled', 'hidden');
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener("scroll", onScroll);
+
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+        const body = document.body;
+
+        if (hamburger && nav) {
+          hamburger.addEventListener("click", function () {
+            hamburger.classList.toggle("active");
+            nav.classList.toggle("active");
+            body.classList.toggle("no-scroll");
+          });
+
+          // Close mobile menu when clicking on a link
+          const navLinks = document.querySelectorAll(".nav-link");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              hamburger.classList.remove("active");
+              nav.classList.remove("active");
+              body.classList.remove("no-scroll");
+            });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", function (event) {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+
+            if (
+              !isClickInsideNav &&
+              !isClickOnHamburger &&
+              nav.classList.contains("active")
+            ) {
+              hamburger.classList.remove("active");
+              nav.classList.remove("active");
+              body.classList.remove("no-scroll");
+            }
+          });
+        }
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              const headerHeight = header.offsetHeight;
+              const targetPosition = targetElement.offsetTop - headerHeight;
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+
+        // Services Filtering System
+        const filterTabs = document.querySelectorAll(".filter-tab");
+        const searchInput = document.getElementById("searchInput");
+        const serviceCards = document.querySelectorAll(".service-card");
+        const radiologyGrid = document.getElementById("radiology-grid");
+        const testsGrid = document.getElementById("tests-grid");
+        const radiologySection = document.getElementById("radiology-services");
+        const testsSection = document.getElementById("tests-services");
+        const loadMoreRadiologyBtn = document.getElementById(
+          "loadMoreRadiologyBtn"
+        );
+        const loadMoreTestsBtn = document.getElementById("loadMoreTestsBtn");
+
+        let activeCategory = "all";
+        let searchQuery = "";
+
+        // Filter by category
+        filterTabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            // Update active tab
+            filterTabs.forEach((t) => t.classList.remove("active"));
+            this.classList.add("active");
+
+            activeCategory = this.getAttribute("data-category");
+            filterServices();
+          });
+        });
+
+        // Search functionality
+        searchInput.addEventListener("input", function () {
+          searchQuery = this.value.toLowerCase().trim();
+          filterServices();
+        });
+
+        // Filter services based on category and search query
+        function filterServices() {
+          let visibleCount = 0;
+          let radiologyVisible = 0;
+          let testsVisible = 0;
+
+          serviceCards.forEach((card) => {
+            const category = card.getAttribute("data-category");
+            const title = card
+              .querySelector(".service-title")
+              .textContent.toLowerCase();
+            const description = card
+              .querySelector(".service-description")
+              .textContent.toLowerCase();
+
+            const matchesCategory =
+              activeCategory === "all" || category === activeCategory;
+            const matchesSearch =
+              searchQuery === "" ||
+              title.includes(searchQuery) ||
+              description.includes(searchQuery);
+
+            if (matchesCategory && matchesSearch) {
+              card.style.display = "flex";
+              visibleCount++;
+
+              // Count visible services by category
+              if (category === "radiology") radiologyVisible++;
+              if (category === "tests") testsVisible++;
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          // Show/hide sections based on active category and search
+          if (
+            activeCategory === "radiology" ||
+            (activeCategory === "all" && searchQuery && radiologyVisible > 0)
+          ) {
+            radiologySection.style.display = "block";
+          } else if (activeCategory === "radiology") {
+            radiologySection.style.display = "none";
+          } else {
+            radiologySection.style.display = "block";
+          }
+
+          if (
+            activeCategory === "tests" ||
+            (activeCategory === "all" && searchQuery && testsVisible > 0)
+          ) {
+            testsSection.style.display = "block";
+          } else if (activeCategory === "tests") {
+            testsSection.style.display = "none";
+          } else {
+            testsSection.style.display = "block";
+          }
+
+          // Show no results message if needed
+          showNoResultsMessage(visibleCount);
+
+          // Reset load more buttons
+          resetLoadMoreButtons();
+        }
+
+        // Show no results message
+        function showNoResultsMessage(visibleCount) {
+          // Remove existing no results messages
+          document.querySelectorAll(".no-results").forEach((el) => el.remove());
+
+          if (visibleCount === 0) {
+            const noResults = document.createElement("div");
+            noResults.className = "no-results";
+            noResults.innerHTML = `
+                        <i class="fas fa-search"></i>
+                        <h3>لم نعثر على خدمات تطابق بحثك</h3>
+                        <p>جرب استخدام كلمات بحث مختلفة أو استعرض جميع الفئات</p>
+                    `;
+
+            if (
+              activeCategory === "radiology" ||
+              (activeCategory === "all" && searchQuery)
+            ) {
+              radiologyGrid.appendChild(noResults);
+            } else if (
+              activeCategory === "tests" ||
+              (activeCategory === "all" && searchQuery)
+            ) {
+              testsGrid.appendChild(noResults);
+            } else {
+              // If we're on all categories with no search, show in both grids
+              const noResults1 = noResults.cloneNode(true);
+              const noResults2 = noResults.cloneNode(true);
+              radiologyGrid.appendChild(noResults1);
+              testsGrid.appendChild(noResults2);
+            }
+          }
+        }
+
+        // Load More Functionality for Radiology
+        let radiologyShown = 0;
+
+        function initializeRadiologyLoadMore() {
+          const hiddenRadiologyServices = document.querySelectorAll(
+            "#radiology-grid .service-card.hidden"
+          );
+
+          if (loadMoreRadiologyBtn && hiddenRadiologyServices.length > 0) {
+            loadMoreRadiologyBtn.addEventListener("click", function () {
+              // Show loading state
+              const originalText = loadMoreRadiologyBtn.innerHTML;
+              loadMoreRadiologyBtn.innerHTML =
+                '<span class="loading-spinner"></span> جاري التحميل...';
+              loadMoreRadiologyBtn.disabled = true;
+
+              // Simulate loading delay for better UX
+              setTimeout(() => {
+                // Show next 3 services
+                const servicesToShow = Math.min(
+                  3,
+                  hiddenRadiologyServices.length - radiologyShown
+                );
+
+                for (
+                  let i = radiologyShown;
+                  i < radiologyShown + servicesToShow;
+                  i++
+                ) {
+                  if (hiddenRadiologyServices[i]) {
+                    hiddenRadiologyServices[i].classList.remove("hidden");
+                    // Reinitialize AOS for newly shown elements
+                    AOS.refresh();
+                  }
+                }
+
+                radiologyShown += servicesToShow;
+
+                // Update button text or hide if all services are shown
+                if (radiologyShown >= hiddenRadiologyServices.length) {
+                  loadMoreRadiologyBtn.innerHTML =
+                    '<i class="fas fa-check"></i> تم عرض جميع خدمات الأشعة';
+                  loadMoreRadiologyBtn.disabled = true;
+                  setTimeout(() => {
+                    loadMoreRadiologyBtn.style.display = "none";
+                  }, 3000);
+                } else {
+                  loadMoreRadiologyBtn.innerHTML = `<i class="fas fa-chevron-down"></i> عرض المزيد من خدمات الأشعة (${
+                    hiddenRadiologyServices.length - radiologyShown
+                  })`;
+                  loadMoreRadiologyBtn.disabled = false;
+                }
+              }, 500);
+            });
+          }
+        }
+
+        // Load More Functionality for Tests
+        let testsShown = 0;
+
+        function initializeTestsLoadMore() {
+          const hiddenTestsServices = document.querySelectorAll(
+            "#tests-grid .service-card.hidden"
+          );
+
+          if (loadMoreTestsBtn && hiddenTestsServices.length > 0) {
+            loadMoreTestsBtn.addEventListener("click", function () {
+              // Show loading state
+              const originalText = loadMoreTestsBtn.innerHTML;
+              loadMoreTestsBtn.innerHTML =
+                '<span class="loading-spinner"></span> جاري التحميل...';
+              loadMoreTestsBtn.disabled = true;
+
+              // Simulate loading delay for better UX
+              setTimeout(() => {
+                // Show next 3 services
+                const servicesToShow = Math.min(
+                  3,
+                  hiddenTestsServices.length - testsShown
+                );
+
+                for (let i = testsShown; i < testsShown + servicesToShow; i++) {
+                  if (hiddenTestsServices[i]) {
+                    hiddenTestsServices[i].classList.remove("hidden");
+                    // Reinitialize AOS for newly shown elements
+                    AOS.refresh();
+                  }
+                }
+
+                testsShown += servicesToShow;
+
+                // Update button text or hide if all services are shown
+                if (testsShown >= hiddenTestsServices.length) {
+                  loadMoreTestsBtn.innerHTML =
+                    '<i class="fas fa-check"></i> تم عرض جميع خدمات التحاليل';
+                  loadMoreTestsBtn.disabled = true;
+                  setTimeout(() => {
+                    loadMoreTestsBtn.style.display = "none";
+                  }, 3000);
+                } else {
+                  loadMoreTestsBtn.innerHTML = `<i class="fas fa-chevron-down"></i> عرض المزيد من خدمات التحاليل (${
+                    hiddenTestsServices.length - testsShown
+                  })`;
+                  loadMoreTestsBtn.disabled = false;
+                }
+              }, 500);
+            });
+          }
+        }
+
+        // Reset load more buttons when filtering
+        function resetLoadMoreButtons() {
+          // Reset counters
+          radiologyShown = 0;
+          testsShown = 0;
+
+          // Reinitialize load more buttons
+          initializeRadiologyLoadMore();
+          initializeTestsLoadMore();
+
+          // For radiology
+          if (loadMoreRadiologyBtn) {
+            const visibleRadiology = document.querySelectorAll(
+              "#radiology-grid .service-card:not(.hidden)"
+            );
+            const totalRadiology = document.querySelectorAll(
+              "#radiology-grid .service-card"
+            ).length;
+
+            if (visibleRadiology.length >= totalRadiology) {
+              loadMoreRadiologyBtn.style.display = "none";
+            } else {
+              loadMoreRadiologyBtn.style.display = "flex";
+              const hiddenRadiologyServices = document.querySelectorAll(
+                "#radiology-grid .service-card.hidden"
+              );
+              loadMoreRadiologyBtn.innerHTML = `<i class="fas fa-chevron-down"></i> عرض المزيد من خدمات الأشعة (${hiddenRadiologyServices.length})`;
+              loadMoreRadiologyBtn.disabled = false;
+            }
+          }
+
+          // For tests
+          if (loadMoreTestsBtn) {
+            const visibleTests = document.querySelectorAll(
+              "#tests-grid .service-card:not(.hidden)"
+            );
+            const totalTests = document.querySelectorAll(
+              "#tests-grid .service-card"
+            ).length;
+
+            if (visibleTests.length >= totalTests) {
+              loadMoreTestsBtn.style.display = "none";
+            } else {
+              loadMoreTestsBtn.style.display = "flex";
+              const hiddenTestsServices = document.querySelectorAll(
+                "#tests-grid .service-card.hidden"
+              );
+              loadMoreTestsBtn.innerHTML = `<i class="fas fa-chevron-down"></i> عرض المزيد من خدمات التحاليل (${hiddenTestsServices.length})`;
+              loadMoreTestsBtn.disabled = false;
+            }
+          }
+        }
+
+        // Initialize load more buttons on page load
+        initializeRadiologyLoadMore();
+        initializeTestsLoadMore();
+
+        // Lazy Loading Images with Intersection Observer
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+        if ("IntersectionObserver" in window) {
+          const imageObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const img = entry.target;
+                  img.classList.add("loaded");
+
+                  // Load the actual image if it's a placeholder
+                  if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    delete img.dataset.src;
+                  }
+
+                  imageObserver.unobserve(img);
+                }
+              });
+            },
+            {
+              rootMargin: "50px 0px",
+              threshold: 0.1,
+            }
+          );
+
+          lazyImages.forEach((img) => imageObserver.observe(img));
+        } else {
+          // Fallback for browsers that don't support IntersectionObserver
+          lazyImages.forEach((img) => {
+            img.classList.add("loaded");
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+            }
+          });
+        }
+
+        // WhatsApp Button Click Analytics
+        const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+
+        whatsappButtons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            // You can add analytics tracking here
+            console.log("WhatsApp button clicked:", this.href);
+          });
+        });
+
+        // Scroll to Top Button
+        const scrollTopButton = document.getElementById("scrollTop");
+
+        function toggleScrollTopButton() {
+          if (window.scrollY > 300) {
+            scrollTopButton.classList.add("visible");
+          } else {
+            scrollTopButton.classList.remove("visible");
+          }
+        }
+
+        if (scrollTopButton) {
+          window.addEventListener("scroll", toggleScrollTopButton);
+
+          scrollTopButton.addEventListener("click", function () {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          });
+
+          // Initialize on load
+          toggleScrollTopButton();
+        }
+
+        // Phone Number Formatting and Tracking
+        const phoneLinks = document.querySelectorAll(".phone-link");
+
+        phoneLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            // You can add phone call tracking here
+            console.log("Phone number clicked:", this.textContent);
+          });
+        });
+
+        // Performance Optimization: Debounce Scroll Events
+        function debounce(func, wait) {
+          let timeout;
+          return function executedFunction(...args) {
+            const later = () => {
+              clearTimeout(timeout);
+              func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+          };
+        }
+
+        // Optimized scroll handler for header
+        const optimizedScrollHandler = debounce(onScroll, 10);
+        window.addEventListener("scroll", optimizedScrollHandler);
+
+        // Initialize all components
+        console.log("OnTimeScan services page initialized successfully");
+      });
+    </script>
+  </body>
+</html>
